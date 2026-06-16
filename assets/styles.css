@@ -1,0 +1,93 @@
+/* SquadSync — shared styles */
+
+#MainMenu, footer, header { visibility: hidden; }
+.stApp { background: #ffffff; }
+.block-container { max-width: 720px; padding: 2rem 1.5rem 6rem; }
+
+/* Typography */
+h1 {
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: #0f0f0f !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 0.2rem !important;
+}
+h2 {
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #0f0f0f !important;
+    margin-bottom: 0.2rem !important;
+}
+h3 {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    color: #0f0f0f !important;
+}
+p  { font-size: 0.875rem !important; color: #4b5563 !important; line-height: 1.65 !important; }
+li { font-size: 0.875rem !important; color: #4b5563 !important; }
+label { font-size: 0.875rem !important; color: #0f0f0f !important; font-weight: 500 !important; }
+small { font-size: 0.78rem !important; color: #9ca3af !important; }
+
+/* Buttons */
+.stButton > button,
+.stFormSubmitButton > button {
+    background: #0f0f0f !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 0.45rem 1.25rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em !important;
+}
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background: #262626 !important;
+    border: none !important;
+}
+
+/* Inputs */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div > div {
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    font-size: 0.875rem !important;
+    color: #0f0f0f !important;
+    background: #ffffff !important;
+}
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #0f0f0f !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Slider */
+div[data-testid="stSlider"] > div > div > div > div[role="slider"] {
+    background: #0f0f0f !important;
+    border: 2px solid #0f0f0f !important;
+}
+
+/* Radio */
+.stRadio > div { gap: 0.5rem !important; }
+.stRadio label { font-weight: 400 !important; color: #374151 !important; }
+
+/* Dividers */
+hr {
+    border: none !important;
+    border-top: 1px solid #e5e7eb !important;
+    margin: 1.25rem 0 !important;
+}
+
+/* Alerts */
+.stAlert { border-radius: 4px !important; font-size: 0.85rem !important; }
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #fafafa !important;
+    border-right: 1px solid #e5e7eb !important;
+}
+[data-testid="stSidebar"] .stMarkdown p { color: #6b7280 !important; font-size: 0.8rem !important; }
+[data-testid="stSidebar"] h3 { font-size: 0.78rem !important; color: #9ca3af !important; text-transform: uppercase; letter-spacing: 0.06em; }

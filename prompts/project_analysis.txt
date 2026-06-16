@@ -1,0 +1,22 @@
+Analyze this project brief and return JSON.
+
+Project: {title}
+Description: {description}
+Timeline: {timeline}
+Team Size: {team_size}
+
+Return exactly this JSON structure:
+{{
+  "summary": "2-3 sentences describing the core problem, what the team must build, and the main challenge",
+  "workstreams": ["workstream 1", "workstream 2", "workstream 3", "workstream 4"],
+  "risks": ["specific risk 1", "specific risk 2", "specific risk 3"],
+  "suggested_roles": ["role 1 with brief description", "role 2", "role 3", "role 4"],
+  "deliverables": ["deliverable 1", "deliverable 2", "deliverable 3"]
+}}
+
+Rules:
+- Be specific to this project, not generic
+- Max 4 workstreams
+- Risks must name a concrete failure mode, not a vague concern
+- Suggested roles must map to the actual work required
+- Deliverables must be concrete outputs, not activities

@@ -1,0 +1,40 @@
+Generate exactly 8 alignment questions for this project team.
+
+Project: {title}
+Description: {description}
+Timeline: {timeline}
+Team Size: {team_size}
+Suggested Workstreams: {workstreams}
+
+Questions must be specific to THIS project — not generic team questions.
+Each question should reveal a real alignment gap that commonly breaks teams like this.
+
+Return JSON:
+{{
+  "questions": [
+    {{
+      "id": 1,
+      "question": "question text — specific to this project",
+      "type": "open",
+      "dimension": "group_alignment",
+      "placeholder": "e.g. short example answer"
+    }}
+  ]
+}}
+
+Question types:
+- "open": free text (for nuanced, qualitative answers)
+- "slider": 1-5 scale (for measuring confidence or clarity)
+- "mcq": multiple choice — include "options": ["option A", "option B", "option C"] (max 4 options)
+
+Required distribution — generate in this exact order:
+1. group_alignment (open) — What is the primary problem this project is solving? (test interpretation)
+2. group_alignment (mcq, 3 options) — Which outcome defines success for this project? (project-specific options)
+3. priority_alignment (open) — What should the team complete first within the timeline and why?
+4. priority_alignment (mcq, 4 options) — Which is the highest-risk decision for this project? (project-specific risks)
+5. role_clarity (open) — What specific contribution will you make to this project?
+6. role_clarity (slider) — How clearly do you understand your responsibilities right now? (1=unclear, 5=very clear)
+7. skill_coverage (open) — What relevant technical or domain skills do you bring?
+8. tool_cohesion (mcq, 3-4 options) — How would you prefer the team to coordinate day-to-day? (relevant options for this team)
+
+Every question must reference context from the project description. Generic questions will fail.

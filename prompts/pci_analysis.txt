@@ -1,0 +1,51 @@
+Analyze these team alignment responses and calculate the Project Cohesion Index.
+
+Project: {title}
+Description: {description}
+
+Team Responses:
+{responses}
+
+Score each PCI dimension 0-100 based on the actual content of responses:
+
+- group_alignment (25%): How consistently do team members understand the project goals and what success means?
+  Low score = different interpretations of the problem. High score = shared understanding.
+
+- priority_alignment (25%): How aligned are they on what to build first and what matters most?
+  Low score = conflicting priorities. High score = clear shared priority order.
+
+- role_clarity (20%): How clearly has each person thought through their specific role?
+  Low score = vague or overlapping contributions. High score = distinct, concrete ownership.
+
+- skill_coverage (15%): Does the collective skill set cover what the project actually requires?
+  Low score = skill gaps or duplicate skills. High score = full coverage with no critical gaps.
+
+- tool_cohesion (15%): How aligned are communication and coordination preferences?
+  Low score = conflicting tool preferences. High score = consensus on workflow.
+
+Return JSON:
+{{
+  "scores": {{
+    "group_alignment": <0-100>,
+    "priority_alignment": <0-100>,
+    "role_clarity": <0-100>,
+    "skill_coverage": <0-100>,
+    "tool_cohesion": <0-100>
+  }},
+  "alignment_gaps": [
+    "Specific gap citing real differences in respondent answers (e.g. 'Alice sees X as primary goal; Bob sees Y')",
+    "Another specific gap"
+  ],
+  "discussion_topics": [
+    "Topic 1: concrete question this team must resolve before starting work",
+    "Topic 2: unresolved assumption surfaced by the responses",
+    "Topic 3: risk or conflict the team has not yet addressed"
+  ],
+  "recommendations": [
+    "Concrete action 1 — specific to this team's responses",
+    "Concrete action 2",
+    "Concrete action 3"
+  ]
+}}
+
+Base every output on what respondents actually wrote. Be specific — name people and ideas where relevant.
